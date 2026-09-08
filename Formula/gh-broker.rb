@@ -15,28 +15,28 @@
 class GhBroker < Formula
   desc "GitHub token broker client that mints short-lived repo-scoped tokens"
   homepage "https://github.com/neteleven/github-broker-client"
-  version "0.18.3"
+  version "0.18.4"
   license :cannot_represent # proprietary; internal use only
 
   on_macos do
     on_arm do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.3/gh-broker-aarch64-apple-darwin.tar.gz"
-      sha256 "59df535b137b1c162edeeb68aa18af9dd1276f9b7ebef4bcc47e8c882b42d27c"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.4/gh-broker-aarch64-apple-darwin.tar.gz"
+      sha256 "e9e382fd34694f84815e8fc1270b1efcd8d31baa2435953db374b95e5a31e14a"
     end
     on_intel do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.3/gh-broker-x86_64-apple-darwin.tar.gz"
-      sha256 "5af72ecd6d6276368937cfa37ae57ebd2083599a8562fa1bbd2f4a4d8b8d3fe8"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.4/gh-broker-x86_64-apple-darwin.tar.gz"
+      sha256 "ee17b9915326bdea0ea7d968270440898732b45c6d8e8dbcc25aab12bee88f6c"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.3/gh-broker-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "4646eb1fb15559cd2506087587c18acaf63036bfa0056778524f72cb16977b50"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.4/gh-broker-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "bce3b8282286e2f0457c02fbc17d907ddec11a46afa033acdc38c3acefab8df6"
     end
     on_intel do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.3/gh-broker-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "ce0643be03d8756d0ea414c74e16e7ecfd09344853bf01f2d68fb61e2640f94b"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.4/gh-broker-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "9a4feca106aded6f888451f062448738476efb8acc6ef5f91940e4cc194a704c"
     end
   end
 
