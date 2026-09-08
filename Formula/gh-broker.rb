@@ -15,34 +15,34 @@
 class GhBroker < Formula
   desc "GitHub token broker client that mints short-lived repo-scoped tokens"
   homepage "https://github.com/neteleven/github-broker-client"
-  version "0.18.4"
+  version "0.20.0"
   license :cannot_represent # proprietary; internal use only
 
   on_macos do
     on_arm do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.4/gh-broker-aarch64-apple-darwin.tar.gz"
-      sha256 "e9e382fd34694f84815e8fc1270b1efcd8d31baa2435953db374b95e5a31e14a"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.20.0/gh-broker-aarch64-apple-darwin.tar.gz"
+      sha256 "2202230a72db8eb340c475c86d06e4f232e11e2e54e6b22cd6316176908c14c3"
     end
     on_intel do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.4/gh-broker-x86_64-apple-darwin.tar.gz"
-      sha256 "ee17b9915326bdea0ea7d968270440898732b45c6d8e8dbcc25aab12bee88f6c"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.20.0/gh-broker-x86_64-apple-darwin.tar.gz"
+      sha256 "2875abf598fa63759c255fa5f8b076e2dce2bef328b722ccb5803235d33add3e"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.4/gh-broker-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "bce3b8282286e2f0457c02fbc17d907ddec11a46afa033acdc38c3acefab8df6"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.20.0/gh-broker-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "3bf2d9497b0789ffa91a288639185a6603280b727bd81d16bfc77c5e59bf7ff8"
     end
     on_intel do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.4/gh-broker-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "9a4feca106aded6f888451f062448738476efb8acc6ef5f91940e4cc194a704c"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.20.0/gh-broker-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "fabdca435b5a3696ec1a5e340c15183d89095325151785046a0ea8a0614b86ec"
     end
   end
 
   def install
     # Each tarball unpacks into a single top-level gh-broker-<target>/ dir
-    # (binary + README.md); Homebrew strips that leading directory first.
+    # (just the binary); Homebrew strips that leading directory first.
     bin.install "gh-broker"
   end
 
