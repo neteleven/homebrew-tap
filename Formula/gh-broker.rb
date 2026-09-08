@@ -20,23 +20,23 @@ class GhBroker < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/v0.18.3/gh-broker-aarch64-apple-darwin.tar.gz"
-      sha256 "bc80ab2770345f16c02929cba0f8f95d5c67086d44ffdbb72a82c40378d714c6"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.3/gh-broker-aarch64-apple-darwin.tar.gz"
+      sha256 "59df535b137b1c162edeeb68aa18af9dd1276f9b7ebef4bcc47e8c882b42d27c"
     end
     on_intel do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/v0.18.3/gh-broker-x86_64-apple-darwin.tar.gz"
-      sha256 "8f02c3125af246dba5cd3ccb5b7fc2b5960da9264eca1fa44836f0f7effd2639"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.3/gh-broker-x86_64-apple-darwin.tar.gz"
+      sha256 "5af72ecd6d6276368937cfa37ae57ebd2083599a8562fa1bbd2f4a4d8b8d3fe8"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/v0.18.3/gh-broker-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "03a2a8a07f663e9db6e1660c9f91e254c75934872af874788f0ee1419339692c"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.3/gh-broker-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "4646eb1fb15559cd2506087587c18acaf63036bfa0056778524f72cb16977b50"
     end
     on_intel do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/v0.18.3/gh-broker-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "fddfe57a6a5df85d8c0cf6fa33a7da94250e734b98e14395cbcdba14af207453"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/gh-broker-v0.18.3/gh-broker-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "ce0643be03d8756d0ea414c74e16e7ecfd09344853bf01f2d68fb61e2640f94b"
     end
   end
 
