@@ -3,7 +3,7 @@
 class Den < Formula
   desc "Per-customer isolated development environments for AI agents"
   homepage "https://github.com/neteleven/den"
-  version "0.10.0"
+  version "0.11.0"
   license :cannot_represent # internal use only; THIRD-PARTY-NOTICES.md lists what den links
 
   depends_on "lima"
@@ -13,8 +13,8 @@ class Den < Formula
     # Apple silicon only: an Intel Mac finds no URL here and Homebrew says
     # "formula requires at least a URL" -- docs/install.md names that error.
     on_arm do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.10.0/den_0.10.0_darwin_arm64.zip"
-      sha256 "3b510985e1de84f8258cf8f88c8b6aa659071922cc3f3b39e20926d5fe4fa63b"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.11.0/den_0.11.0_darwin_arm64.zip"
+      sha256 "294ff8ad9c4045ad2f31ea16de202b2047c51f5bf816573dce58eb22f38a1ab3"
     end
   end
 
@@ -23,12 +23,12 @@ class Den < Formula
     # Lima looks for it next to the qemu binary (ADR-0029).
     depends_on "qemu"
     on_arm do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.10.0/den_0.10.0_linux_arm64.zip"
-      sha256 "f2ed08ac7aca63cc376a19fe91ccdf8c19a5ed2a3da41f1b1d7c7a8fcf5dac9c"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.11.0/den_0.11.0_linux_arm64.zip"
+      sha256 "05663692f1ff5c23547b08fb6091b2c0d54a6abbf5bcfcd264b01339ad71e2e9"
     end
     on_intel do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.10.0/den_0.10.0_linux_amd64.zip"
-      sha256 "84e3a30fdc3bf8b407ffbd99edc4ced3f06ec0f4e2fe152813c671ac7b19ba93"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.11.0/den_0.11.0_linux_amd64.zip"
+      sha256 "f9e41f046154d77b5d24d6397594f14f00aa545bd886f917e21e576097fe5893"
     end
   end
 
@@ -38,6 +38,9 @@ class Den < Formula
     # Under docs/, as in the archive, so the user documents' links to each other resolve.
     (doc/"docs").install Dir["docs/*.md"]
     pkgshare.install "examples"
+    # A prompt, not a document: an agent reads it from ~/.claude/skills, so it
+    # goes where the user can copy it from (ADR-0032). install.md says how.
+    pkgshare.install "skills"
   end
 
   test do
