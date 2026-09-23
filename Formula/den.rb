@@ -3,18 +3,23 @@
 class Den < Formula
   desc "Per-customer isolated development environments for AI agents"
   homepage "https://github.com/neteleven/den"
-  version "0.15.2"
+  version "0.15.3"
   license :cannot_represent # internal use only; THIRD-PARTY-NOTICES.md lists what den links
 
   depends_on "lima"
 
   # The archives the release built, republished on the tap.
   on_macos do
-    # Apple silicon only: an Intel Mac finds no URL here and Homebrew says
-    # "formula requires at least a URL" -- docs/install.md names that error.
+    # Apple silicon only (ADR-0039): Intel carries the same archive so that the
+    # formula loads, and the requirement refuses it.
+    depends_on arch: :arm64
     on_arm do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.15.2/den_0.15.2_darwin_arm64.zip"
-      sha256 "bf9ecb1dc1baa4f050d46ea6afe6f966b30549b040bf8119a3b52b7dc1fbd862"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.15.3/den_0.15.3_darwin_arm64.zip"
+      sha256 "378b074b9084d1e1e2d5d1fbe9846a86aa585f2e2be0432c5b498b14d7ada35f"
+    end
+    on_intel do
+      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.15.3/den_0.15.3_darwin_arm64.zip"
+      sha256 "378b074b9084d1e1e2d5d1fbe9846a86aa585f2e2be0432c5b498b14d7ada35f"
     end
   end
 
@@ -23,12 +28,12 @@ class Den < Formula
     # Lima looks for it next to the qemu binary (ADR-0029).
     depends_on "qemu"
     on_arm do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.15.2/den_0.15.2_linux_arm64.zip"
-      sha256 "6d9ff6f590d8c25483e2469e2a407cf94c979df350b8b163aafecfa661686b16"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.15.3/den_0.15.3_linux_arm64.zip"
+      sha256 "f1f2b5d96ca9c7e35450677f8b505b372b08c74acb5786b7dee3b5ac85a47fca"
     end
     on_intel do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.15.2/den_0.15.2_linux_amd64.zip"
-      sha256 "a6f1c5f0661d84ffad3c29ebfa4e70643888c68de6e4a4d37dbec78165d43a2b"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.15.3/den_0.15.3_linux_amd64.zip"
+      sha256 "30cd8a3b7fe192d27cce95d5acbfcef61d4fb2495397e8f9d521f9ffb25c91cb"
     end
   end
 
