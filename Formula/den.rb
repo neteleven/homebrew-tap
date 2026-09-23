@@ -3,7 +3,7 @@
 class Den < Formula
   desc "Per-customer isolated development environments for AI agents"
   homepage "https://github.com/neteleven/den"
-  version "0.15.1"
+  version "0.15.2"
   license :cannot_represent # internal use only; THIRD-PARTY-NOTICES.md lists what den links
 
   depends_on "lima"
@@ -13,8 +13,8 @@ class Den < Formula
     # Apple silicon only: an Intel Mac finds no URL here and Homebrew says
     # "formula requires at least a URL" -- docs/install.md names that error.
     on_arm do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.15.1/den_0.15.1_darwin_arm64.zip"
-      sha256 "216fcdde263618a3f5fbb6c4638d7f6eff719bd0ecb2b13fba788b3fc00395d0"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.15.2/den_0.15.2_darwin_arm64.zip"
+      sha256 "bf9ecb1dc1baa4f050d46ea6afe6f966b30549b040bf8119a3b52b7dc1fbd862"
     end
   end
 
@@ -23,12 +23,12 @@ class Den < Formula
     # Lima looks for it next to the qemu binary (ADR-0029).
     depends_on "qemu"
     on_arm do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.15.1/den_0.15.1_linux_arm64.zip"
-      sha256 "69621b0e24a95c904bfe68c8735035e286724383775320f1def63271e0d912f0"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.15.2/den_0.15.2_linux_arm64.zip"
+      sha256 "6d9ff6f590d8c25483e2469e2a407cf94c979df350b8b163aafecfa661686b16"
     end
     on_intel do
-      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.15.1/den_0.15.1_linux_amd64.zip"
-      sha256 "6133612dedce6f333747e6abf4611127dc05c56f9250302876a0426d61f028c9"
+      url "https://github.com/neteleven/homebrew-tap/releases/download/den-v0.15.2/den_0.15.2_linux_amd64.zip"
+      sha256 "a6f1c5f0661d84ffad3c29ebfa4e70643888c68de6e4a4d37dbec78165d43a2b"
     end
   end
 
